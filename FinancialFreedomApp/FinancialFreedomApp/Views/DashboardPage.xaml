@@ -1,0 +1,510 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fa="clr-namespace:FontAwesome"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             Shell.NavBarIsVisible="False"
+             x:Class="FinancialFreedomApp.Views.DashboardPage">
+    <ContentPage.Content>
+        
+        <StackLayout Margin="26,20,26,0">
+            <Grid  ColumnDefinitions="40,*,40" HeightRequest="60">
+                <Label Text="{Static fa:FontAwesomeIcons.Bars}"
+                       Grid.Column="0"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Start"
+                       VerticalTextAlignment="Center"
+                       FontFamily="FASolid"
+                       FontSize="24" />
+                <Label Text="Dashboard"
+                       Grid.Column="1"
+                       TextColor="Black"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="End"
+                       FontFamily="PoppinsMedium"
+                       FontSize="22" />
+                <Grid Grid.Column="2">
+                    <Label Text="{Static fa:FontAwesomeIcons.Bell}"
+                           Grid.Column="0"
+                           TextColor="Black"
+                           HorizontalTextAlignment="End"
+                           VerticalTextAlignment="Center"
+                           FontFamily="FARegular"
+                           FontSize="24" />
+                    <Ellipse HeightRequest="10"
+                             WidthRequest="10"
+                             Margin="0,8,10,0"
+                             Fill="Red"
+                             HorizontalOptions="End"
+                             VerticalOptions="Start"/>
+                    </Grid>
+                </Grid>
+                <ScrollView VerticalScrollBarVisibility="Never">
+                    <StackLayout>
+                    <Frame BackgroundColor="#6CD9E9"
+                           HeightRequest="170"
+                           CornerRadius="14"
+                           Padding="0">
+                        <Grid>
+                            <Grid>
+                                <Ellipse HorizontalOptions="Start"
+                                     Grid.RowSpan="6"
+                                     Margin="-40,0,0,-60"
+                                     VerticalOptions="End"
+                                     HeightRequest="140"
+                                     WidthRequest="140"
+                                     Fill="#E580A2"/>
+                                <Ellipse HorizontalOptions="Start"
+                                         Grid.RowSpan="6"
+                                         Margin="-40,0,0,0"
+                                         VerticalOptions="End"
+                                         HeightRequest="110"
+                                         WidthRequest="110"
+                                         Stroke="black" />
+                                <Ellipse HorizontalOptions="End"
+                                         Grid.RowSpan="6"
+                                         Margin="0,-50,-70,0"
+                                         VerticalOptions="Start"
+                                         HeightRequest="160"
+                                         WidthRequest="160"
+                                         Fill="#FFA682" />
+                                <Ellipse HorizontalOptions="End"
+                                         Grid.RowSpan="6"
+                                         Margin="0,-120,-60,0"
+                                         VerticalOptions="Start"
+                                         HeightRequest="180"
+                                         WidthRequest="180"
+                                         Stroke="black" />
+                            </Grid>
+                            <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition Height="Auto" />
+                                <!--monney-->
+                                <RowDefinition Height="Auto" />
+                                <!--ballance-->
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <!--button-->
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            
+                            <Label Text="$ 300.00"
+                                   FontFamily="PoppinsMedium"
+                                   Grid.Row="1"
+                                   FontSize="30"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="White" />
+                            <Label Text="Your Balance"
+                                   FontFamily="PoppinsMedium"
+                                   Grid.Row="2"
+                                   Margin="0,-16,0,10"
+                                   FontSize="12"
+                                   HorizontalTextAlignment="Center"
+                                   TextColor="White" />
+                            <Button CornerRadius="15"
+                                    Grid.Row="3"
+                                    Padding="0"
+                                    FontSize="10"
+                                    BackgroundColor="#00788B"
+                                    HorizontalOptions="Center"
+                                    HeightRequest="30"
+                                    WidthRequest="110"
+                                    TextColor="White"
+                                    Text="Make investation" />
+                        </Grid>
+                        </Grid>
+                    </Frame>
+                <Grid Margin="0,0,0,30">
+                    <StackLayout Grid.Column="0" Margin="0,20,0,0">
+                        <Frame HeightRequest="52"
+                               WidthRequest="52"
+                               Padding="0"
+                               CornerRadius="26"
+                               BackgroundColor="#FEE6D3"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start">
+                            <Grid>
+                            <Label Text="{Static fa:FontAwesomeIcons.Wallet}"
+                                   FontFamily="FASolid"
+                                   Margin="0,2,0,0"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   TextColor="#FFA682"
+                                   FontSize="30" />
+                            <Frame HeightRequest="18"
+                                   WidthRequest="18"
+                                   Opacity="0.8"
+                                   Padding="0"
+                                   Margin="0,10,8,0"
+                                   CornerRadius="2"
+                                       BackgroundColor="#7AC769"
+                                   HorizontalOptions="End"
+                                   VerticalOptions="Start">
+                                <Label Text="{Static fa:FontAwesomeIcons.Signal}"
+                                       FontFamily="FASolid"
+                                       Margin="0,2,0,0"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       TextColor="White"
+                                       FontSize="8" />
+                            </Frame>
+                            </Grid>
+                        </Frame>
+                        <Label Text="Investation"
+                               Margin="0,2,0,0"
+                               HorizontalOptions="Center"
+                               TextColor="Black"
+                               FontSize="12"/>
+
+                    </StackLayout>
+                    <StackLayout Grid.Column="1"
+                                 Margin="0,20,0,0">
+                        <Frame HeightRequest="52"
+                               WidthRequest="52"
+                               Padding="0"
+                               CornerRadius="26"
+                               BackgroundColor="#DEF4F8"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start">
+                            <Grid>
+                                <Label Text="{Static fa:FontAwesomeIcons.SmileBeam}"
+                                       FontFamily="FASolid"
+                                       Margin="0,2,0,0"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       TextColor="#14CEEE"
+                                       FontSize="30" />
+                                <Frame HeightRequest="18"
+                                       WidthRequest="18"
+                                       Opacity="0.8"
+                                       Padding="0"
+                                       Margin="0,10,8,0"
+                                       CornerRadius="2"
+                                       BackgroundColor="#F3729D"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Start">
+                                    <Label Text="{Static fa:FontAwesomeIcons.EllipsisH}"
+                                           FontFamily="FASolid"
+                                           Margin="0,2,0,0"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           TextColor="White"
+                                           FontSize="10" />
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                        <Label Text="Consultation"
+                               Margin="0,2,0,0"
+                               HorizontalOptions="Center"
+                               TextColor="Black"
+                               FontSize="12" />
+
+                    </StackLayout>
+                    <StackLayout Grid.Column="2"
+                                 Margin="0,20,0,0">
+                        <Frame HeightRequest="52"
+                               WidthRequest="52"
+                               Padding="0"
+                               CornerRadius="26"
+                               BackgroundColor="#FBE5EC"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start">
+                            <Grid>
+                                <Label Text="{Static fa:FontAwesomeIcons.CreditCard}"
+                                       FontFamily="FASolid"
+                                       Margin="0,2,0,0"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       TextColor="#F3719D"
+                                       FontSize="26" />
+                                <Frame HeightRequest="18"
+                                       WidthRequest="18"
+                                       Opacity="0.8"
+                                       Padding="0"
+                                       Margin="0,10,8,0"
+                                       CornerRadius="2"
+                                       BackgroundColor="#14CDEF"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Start">
+                                    <Label Text="{Static fa:FontAwesomeIcons.ArrowDown}"
+                                           FontFamily="FASolid"
+                                           Margin="0,2,0,0"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           TextColor="White"
+                                           FontSize="8" />
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                        <Label Text="Topup"
+                               Margin="0,2,0,0"
+                               HorizontalOptions="Center"
+                               TextColor="Black"
+                               FontSize="12" />
+
+                    </StackLayout>
+                    <StackLayout Grid.Column="3"
+                                 Margin="0,20,0,0">
+                        <Frame HeightRequest="52"
+                               WidthRequest="52"
+                               Padding="0"
+                               CornerRadius="26"
+                               BackgroundColor="#DCEEC5"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start">
+                            <Grid>
+                                <Label Text="{Static fa:FontAwesomeIcons.Cog}"
+                                       FontFamily="FASolid"
+                                       Margin="0,2,0,0"
+                                       HorizontalOptions="Center"
+                                       VerticalOptions="Center"
+                                       TextColor="#7AC769"
+                                       FontSize="30" />
+                                <Frame HeightRequest="18"
+                                       WidthRequest="18"
+                                       Opacity="0.8"
+                                       Padding="0"
+                                       Margin="0,10,8,0"
+                                       CornerRadius="9"
+                                       BackgroundColor="#FFA681"
+                                       HorizontalOptions="End"
+                                       VerticalOptions="Start">
+                                    <Label Text="{Static fa:FontAwesomeIcons.DollarSign}"
+                                           FontFamily="FASolid"
+                                           Margin="0,2,0,0"
+                                           HorizontalOptions="Center"
+                                           VerticalOptions="Center"
+                                           TextColor="White"
+                                           FontSize="8" />
+                                </Frame>
+                            </Grid>
+                        </Frame>
+                        <Label Text="Integration"
+                               Margin="0,2,0,0"
+                               HorizontalOptions="Center"
+                               TextColor="Black"
+                               FontSize="12" />
+
+                    </StackLayout>
+                </Grid>
+                    <BoxView Color="LightGray"
+                             HeightRequest="1"
+                             Opacity="0.2" />
+                    <Grid Margin="0,20,0,20">
+                        <microcharts:ChartView x:Name="Chart" />
+                        <StackLayout Grid.Column="1">
+                            <Label Text="Goals" 
+                                   FontFamily="PoppinsBold"
+                                   TextColor="Black"/>
+                            <Grid ColumnDefinitions="Auto,*,Auto">
+                                <Ellipse Fill="#F2729D"
+                                         Grid.Column="0"
+                                         Grid.Row="0"
+                                         HeightRequest="10"
+                                         WidthRequest="10"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center" />
+                                <Label Text="Education"
+                                       Grid.Column="1"
+                                       Grid.Row="0"
+                                       TextColor="Black" />
+                                <Label Text="75%"
+                                       Grid.Column="2"
+                                       Grid.Row="0"
+                                       HorizontalTextAlignment="End"
+                                       TextColor="Black" />
+                                <Ellipse Fill="#74D2E2"
+                                         Grid.Column="0"
+                                         Grid.Row="1"
+                                         HeightRequest="10"
+                                         WidthRequest="10"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center" />
+                                <Label Text="Health"
+                                       Grid.Column="1"
+                                       Grid.Row="1"
+                                       TextColor="Black" />
+                                <Label Text="60%"
+                                       Grid.Column="2"
+                                       Grid.Row="1"
+                                       HorizontalTextAlignment="End"
+                                       TextColor="Black" />
+                                <Ellipse Fill="#ACCC82"
+                                         Grid.Column="0"
+                                         Grid.Row="2"
+                                         HeightRequest="10"
+                                         WidthRequest="10"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Center" />
+                                <Label Text="House"
+                                       Grid.Column="1"
+                                       Grid.Row="2"
+                                       TextColor="Black" />
+                                <Label Text="50%"
+                                       Grid.Column="2"
+                                       Grid.Row="2"
+                                       HorizontalTextAlignment="End"
+                                       TextColor="Black" />
+                            </Grid>
+                        </StackLayout>
+                    </Grid>
+                    <BoxView Color="LightGray"
+                             HeightRequest="1"
+                             Opacity="0.2" />
+                    <Label Text="Activities"
+                           Margin="0,20,0,10"
+                           FontSize="16"
+                           FontFamily="PoppinsBold"
+                           TextColor="Black" />
+                    <Grid ColumnDefinitions="Auto,*,Auto">
+                        <Frame HeightRequest="46"
+                               WidthRequest="46"
+                               HasShadow="False"
+                               Margin="0,0,20,0"
+                               Padding="0"
+                               Grid.Column="0"
+                               CornerRadius="20"
+                               BackgroundColor="#7BC769"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start">
+                            <Label Text="{Static fa:FontAwesomeIcons.ArrowDown}"
+                                   FontFamily="FASolid"
+                                   Rotation="45"
+                                   Margin="0,2,0,0"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   TextColor="White"
+                                   FontSize="16" />
+                        </Frame>
+                        <StackLayout Spacing="0"
+                                     Grid.Column="1">
+                            <Label Text="Invest to pension"
+                                   FontSize="14"
+                                   TextColor="Black" />
+                            <Label Text="$150"
+                                   FontSize="14"
+                                   TextColor="#F2709C" />
+                        </StackLayout>
+                        <Label Text="12/02/2021"
+                               Grid.Column="2"
+                               FontSize="14"
+                               VerticalOptions="End"
+                               Margin="0,0,0,0"
+                               TextColor="Gray" />
+                    </Grid>
+                    <BoxView Color="LightGray"
+                             Margin="0,10,0,10"
+                             HeightRequest="1"
+                             Opacity="0.2" />
+                    <Grid ColumnDefinitions="Auto,*,Auto">
+                        <Frame HeightRequest="46"
+                               WidthRequest="46"
+                               HasShadow="False"
+                               Margin="0,0,20,0"
+                               Padding="0"
+                               Grid.Column="0"
+                               CornerRadius="20"
+                               BackgroundColor="#7BC769"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start">
+                            <Label Text="{Static fa:FontAwesomeIcons.ArrowDown}"
+                                   FontFamily="FASolid"
+                                   Rotation="45"
+                                   Margin="0,2,0,0"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   TextColor="White"
+                                   FontSize="16" />
+                        </Frame>
+                        <StackLayout Spacing="0"
+                                     Grid.Column="1">
+                            <Label Text="Invest to pension"
+                                   FontSize="14"
+                                   TextColor="Black" />
+                            <Label Text="$150"
+                                   FontSize="14"
+                                   TextColor="#F2709C" />
+                        </StackLayout>
+                        <Label Text="12/02/2021"
+                               Grid.Column="2"
+                               FontSize="14"
+                               VerticalOptions="End"
+                               Margin="0,0,0,0"
+                               TextColor="Gray" />
+                    </Grid>
+                    <BoxView Color="LightGray"
+                             Margin="0,10,0,10"
+                             HeightRequest="1"
+                             Opacity="0.2" />
+                    <Grid ColumnDefinitions="Auto,*,Auto">
+                        <Frame HeightRequest="46"
+                               WidthRequest="46"
+                               HasShadow="False"
+                               Margin="0,0,20,0"
+                               Padding="0"
+                               Grid.Column="0"
+                               CornerRadius="20"
+                               BackgroundColor="#7BC769"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Start">
+                            <Label Text="{Static fa:FontAwesomeIcons.ArrowDown}"
+                                   FontFamily="FASolid"
+                                   Rotation="45"
+                                   Margin="0,2,0,0"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   TextColor="White"
+                                   FontSize="16" />
+                        </Frame>
+                        <StackLayout Spacing="0"
+                                     Grid.Column="1">
+                            <Label Text="Invest to pension"
+                                   FontSize="14"
+                                   TextColor="Black" />
+                            <Label Text="$150"
+                                   FontSize="14"
+                                   TextColor="#F2709C" />
+                        </StackLayout>
+                        <Label Text="12/02/2021"
+                               Grid.Column="2"
+                               FontSize="14"
+                               VerticalOptions="End"
+                               Margin="0,0,0,0"
+                               TextColor="Gray" />
+                    </Grid>
+                    <BoxView Color="LightGray"
+                             Margin="0,10,0,0"
+                             HeightRequest="1"
+                             Opacity="0.2" />
+                    <Label Text="Upcoming"
+                           Margin="0,20,0,10"
+                           FontSize="16"
+                           FontFamily="PoppinsBold"
+                           TextColor="Black" />
+                    <Frame BackgroundColor="#FCF0F4"
+                           CornerRadius="14"
+                           Padding="0">
+                        <Grid Padding="20" ColumnDefinitions="*,Auto">
+                            <Label Grid.Column="0"
+                                   FontSize="12"
+                                   Text="You have an Education Insurance to approve"
+                                   TextColor="Black" />
+                            <Button CornerRadius="15"
+                                    Grid.Column="1"
+                                    Padding="0"
+                                    FontSize="14"
+                                    BackgroundColor="#F06E9A"
+                                    HorizontalOptions="Center"
+                                    HeightRequest="20"
+                                    WidthRequest="100"
+                                    TextColor="White"
+                                    Text="Approve" />
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
