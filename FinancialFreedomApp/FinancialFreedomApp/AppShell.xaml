@@ -32,7 +32,8 @@
             https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
             -->
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
-                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="TextColor"
+                        Value="#5CD4E7"></Setter>
             </Style>
             <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
                 <Setter Property="VisualStateManager.VisualStateGroups">
@@ -41,7 +42,9 @@
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
                                     <Setter Property="BackgroundColor" Value="{x:OnPlatform UWP=Transparent, iOS=White}" />
-                                    <Setter TargetName="FlyoutItemLabel" Property="Label.TextColor" Value="{StaticResource Primary}" />
+                                    <Setter TargetName="FlyoutItemLabel"
+                                            Property="Label.TextColor"
+                                            Value="#5CD4E7" />
                                 </VisualState.Setters>
                             </VisualState>
                             <VisualState x:Name="Selected">
@@ -78,11 +81,14 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-    <FlyoutItem Title="Dashboard">
+    <!--<FlyoutItem Title="Dashboard">
         <ShellContent Route="DashboardPage"
                       ContentTemplate="{DataTemplate local:DashboardPage}" />
+    </FlyoutItem>-->
+    <FlyoutItem Title="Health Insurance">
+        <ShellContent Route="HealthInsurancePage"
+                      ContentTemplate="{DataTemplate local:HealthInsurancePage}" />
     </FlyoutItem>
-
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
 
 

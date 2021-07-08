@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fa="clr-namespace:FontAwesome"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="FinancialFreedomApp.Views.HealthInsurancePage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BackgroundColor="#5CD4E7"
+                       Margin="10,0,10,0"
+                       Padding="0"
+                       HasShadow="False"
+                       CornerRadius="26"
+                       HeightRequest="440">
+                    <Grid>
+                        <Grid>
+                            <StackLayout Spacing="0" VerticalOptions="End">
+                                <microcharts:ChartView x:Name="Chart"
+                                                       HeightRequest="140"
+                                                       Margin="-20,0,-20,-15"
+                                                       VerticalOptions="Center">
+
+                                </microcharts:ChartView>
+                                <StackLayout HeightRequest="140">
+                                    <StackLayout.Background>
+                                        <LinearGradientBrush StartPoint="0.5,0"
+                                                             EndPoint="0.5,1">
+                                            <GradientStop Color="#70D9F0"
+                                                          Offset="0.0" />
+                                            <GradientStop Color="#5CD4E7"
+                                                          Offset="1.0" />
+                                        </LinearGradientBrush>
+                                    </StackLayout.Background>
+                                </StackLayout>
+                            </StackLayout>
+                        </Grid>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition />
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <Grid  ColumnDefinitions="40,*,40"
+                                       Margin="14,14,10,0"
+                                       HeightRequest="60">
+                                    <Grid Grid.Column="0">
+                                        <Ellipse HeightRequest="30"
+                                                 WidthRequest="30"
+                                                 Fill="White"
+                                                 HorizontalOptions="Center"
+                                                 VerticalOptions="Center">
+                                            
+                                        </Ellipse>
+                                        <Label Text="{Static fa:FontAwesomeIcons.ChevronLeft}"
+                                               TextColor="Black"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center"
+                                               Margin="0,0,3,0"
+                                               FontFamily="FASolid"
+                                               FontSize="12" />
+                                    </Grid>
+
+                                    <Label Text="{Static fa:FontAwesomeIcons.EllipsisV}"
+                                           Grid.Column="2"
+                                           TextColor="White"
+                                           HorizontalTextAlignment="Center"
+                                           VerticalTextAlignment="Center"
+                                           FontFamily="FASolid"
+                                           FontSize="24" />
+                                    <Grid Grid.Column="1">
+                                        <Label Text="{Static fa:FontAwesomeIcons.Bell}"
+                                               Grid.Column="0"
+                                               TextColor="White"
+                                               HorizontalTextAlignment="End"
+                                               VerticalTextAlignment="Center"
+                                               FontFamily="FARegular"
+                                               FontSize="24" />
+                                        <Ellipse HeightRequest="10"
+                                                 WidthRequest="10"
+                                                 Margin="0,8,10,0"
+                                                 Fill="Red"
+                                                 HorizontalOptions="End"
+                                                 VerticalOptions="Start" />
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                            <StackLayout Grid.Row="1"
+                                         Spacing="0"
+                                         HorizontalOptions="Center"
+                                         VerticalOptions="Start">
+                                <Label Text="Health Insurance"
+                                       HorizontalTextAlignment="Center"
+                                       TextColor="White"
+                                       FontSize="16"
+                                       FontFamily="PoppinsBold" />
+                                <Label Text="$400.000.00"
+                                       FontSize="32"
+                                       HorizontalTextAlignment="Center"
+                                       TextColor="White"
+                                       FontFamily="QuicksandBold" />
+                            </StackLayout>
+                            <Frame Grid.Row="3"
+                                   Margin="20,0,20,20"
+                                   Padding="0"
+                                   CornerRadius="14"
+                                   HasShadow="False"
+                                   HeightRequest="90">
+                                <Grid Margin="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100" />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <StackLayout Grid.Column="1" Spacing="0">
+                                        <Label Text="Your Goal" 
+                                               TextColor="Black" 
+                                               FontSize="12" 
+                                               FontFamily="PoppinsLight"/>
+                                        <Label Text="$600.000.00"
+                                               FontSize="18"
+                                               TextColor="Black"
+                                               FontFamily="QuicksandBold" />
+                                        <ProgressBar Progress="0.6"
+                                                     ProgressColor="#F291B2"
+                                                     Margin="0,6,20,0"/>
+                                    </StackLayout>
+                                </Grid>
+                            </Frame>
+                        </Grid>
+                    </Grid>
+
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
