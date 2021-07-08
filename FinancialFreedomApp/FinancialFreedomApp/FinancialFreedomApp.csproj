@@ -15,6 +15,9 @@
     <None Remove="Fonts\PoppinsMedium.ttf" />
     <None Remove="Fonts\PoppinsRegular.ttf" />
     <None Remove="Fonts\PoppinsThin.ttf" />
+    <None Remove="Fonts\QuicksandBold.ttf" />
+    <None Remove="Fonts\QuicksandMedium.ttf" />
+    <None Remove="Fonts\QuicksandRegular.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +30,9 @@
     <EmbeddedResource Include="Fonts\PoppinsMedium.ttf" />
     <EmbeddedResource Include="Fonts\PoppinsRegular.ttf" />
     <EmbeddedResource Include="Fonts\PoppinsThin.ttf" />
+    <EmbeddedResource Include="Fonts\QuicksandBold.ttf" />
+    <EmbeddedResource Include="Fonts\QuicksandMedium.ttf" />
+    <EmbeddedResource Include="Fonts\QuicksandRegular.ttf" />
   </ItemGroup>
 
   <ItemGroup>

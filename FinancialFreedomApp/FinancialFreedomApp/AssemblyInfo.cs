@@ -11,3 +11,6 @@ using Xamarin.Forms.Xaml;
 [assembly: ExportFont("PoppinsMedium.ttf", Alias = "PoppinsMedium")]
 [assembly: ExportFont("PoppinsRegular.ttf", Alias = "PoppinsRegular")]
 [assembly: ExportFont("PoppinsThin.ttf", Alias = "PoppinsThin")]
+[assembly: ExportFont("QuicksandBold.ttf", Alias = "QuicksandBold")]
+[assembly: ExportFont("QuicksandMedium.ttf", Alias = "QuicksandMedium")]
+[assembly: ExportFont("QuicksandRegular.ttf", Alias = "QuicksandRegular")]

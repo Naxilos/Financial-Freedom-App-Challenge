@@ -22,6 +22,7 @@ namespace FinancialFreedomApp.Droid
          
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
             LoadApplication(new App());
 
             if (Build.VERSION.SdkInt < Android.OS.BuildVersionCodes.Lollipop)
